@@ -10,4 +10,4 @@ function createRandomString(string_length)  {
   return random_string
 }
 
-console.log(createRandomString(5))
+console.log(createRandomString(10))

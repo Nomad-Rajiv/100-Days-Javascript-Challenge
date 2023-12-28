@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date and Time</title>
+</head>
+<body>
+  <button id="button"> Show Date & Time</button>
+  <h1 id="date" style="text-align: center;">Date</h1>
+  <h1 id="time" style="text-align: center;">Time</h1>
+</body>
+<script>
+ let btnShow =  document.getElementById('button');
+ let Tarikh = document.getElementById('date');
+ let Samahy = document.getElementById('time');
+
+ btnShow.addEventListener('click', () =>{
+  let today = new Date();
+  let month = today.getMonth() + 1;
+  let year = today.getFullYear();
+  let date = today.getDate();
+
+  let current_date =  `${date} / ${month}/ ${year}`
+  Tarikh.innerHTML = current_date;
+
+
+  let hours = addZero(today.getHours());
+  let minutes = addZero(today.getMinutes());
+  let seconds = addZero(today.getSeconds());
+
+  let current_time = `${hours} / ${minutes} / ${seconds}`
+  Samahy.innerText = current_time;
+ })
+
+ function addZero(num){
+  return num < 10 ? `0${num}` : num;
+ }
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!-- // JavaScript Program to Compare The Value of Two Dates -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Two Dates</title>
+  <style>
+    .conatiner{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="conatiner">
+    <button>Check</button>
+    <h1>Result</h1>
+  </div>
+  
+  <script>
+    let btnCheck = document.querySelector('button');
+    let result = document.querySelector('h1')
+
+    btnCheck.addEventListener('click', ()=>{
+      let date1 = new Date('2019', '10', '12', '10', '53', '40')
+      let date2 = new Date('2019', '10', '12', '10', '53', '40')
+
+      result.innerText = date1.getTime() === date2.getTime() ? 'Equal' : "Not Equal";
+    })
+  </script>
+</body>
+</html>
