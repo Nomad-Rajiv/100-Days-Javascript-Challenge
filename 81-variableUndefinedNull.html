@@ -1,0 +1,41 @@
+<!-- // JavaScript Program To Check If A Variable Is undefined or null -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body{
+    text-align: center;
+  }
+  div{
+    display: inline-block;
+  }
+  button{
+    display: inline-block;
+    padding: 10px 20px;
+  }
+</style>
+<body>
+
+  <button>Check</button>
+  <h2>Result</h2>
+
+  <script>
+
+      let user1 = null;
+      let user2;
+
+      let btnCheck = document.querySelector('button');
+      let result = document.querySelector('h2');
+
+      btnCheck.addEventListener('click', () => {
+        result.innerText = null == undefined ? 'True' : 'False'
+      } )
+  </script>
+</body>
+
+</html>
