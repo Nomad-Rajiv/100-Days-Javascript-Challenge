@@ -1,0 +1,36 @@
+<!-- JavaScript Program to Pass Parameter to a setTimeout() Function -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>set Time Out</title>
+</head>
+<body>
+  
+
+
+  <script>
+    document.write('hello');
+     let a = setTimeout (function(){
+      alert('I am inside of set Time out ')
+    }, 5000)
+
+    // let b = prompt('Do you want to run set Time out?')
+    // if("n" == b){
+    //   clearTimeout(a)
+    // }
+    // console.log(a);
+
+    // Set Time Out with parameter
+
+    const sum = (a,b) =>{
+      console.log("Yes I am running " + (a+b));
+    }
+
+    setTimeout(sum, 1000, 1,2)
+  </script>
+</body>
+</html>

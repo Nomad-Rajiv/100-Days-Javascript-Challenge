@@ -1,0 +1,38 @@
+<!-- JavaScript Program to Validate An Email Address -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Validation</title>
+</head>
+<body>
+  <form action="#" name="myForm" onsubmit="return myFun()">
+     <label for="">Email : 
+      <input type="text" name="email" value="">
+      <span id="error"></span>
+     </label>
+     <br><br>
+
+     <input type="submit" value="Submit">
+
+
+  </form>
+
+
+  <script>
+    function myFun(){
+      var a = document.myForm.email.value;
+      if(a.indexOf('@') <= 0){
+        document.getElementById('error').innerHTML = "** Invalid @ position";
+        return false;
+      }
+      if((a.charAt(a.length-4) != '.') && (a.charAt(a.length-3) != '.')){
+        document.getElementById('error').innerHTML = "Invalid . position";
+        return false;
+      } 
+    }
+  </script>
+</body>
+</html>
