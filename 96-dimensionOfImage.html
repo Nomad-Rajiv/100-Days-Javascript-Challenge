@@ -1,0 +1,31 @@
+<!-- JavaScript Program to Get the Dimensions of an Image -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimensions of Image</title>
+</head>
+<body>
+  <h2>The Dimensions of the given image is :</h2> <br><br>
+  <p id="widthpx"> </p>
+  <p id="heightpx"></p>
+  <br>
+  <img src="./How-to-Draw-Rocket-–-Featured-Image.jpg" width="100px" height="100px" alt=""  id="photo"> 
+
+  <script>
+    const widthpx = document.getElementById('widthpx');
+    const heightpx = document.getElementById('heightpx');
+    const photo = document.getElementById('photo');
+
+    const img = new Image()
+
+    // get the image
+    photo.onload = function(){
+      widthpx.innerHTML = `Width of the image : ${this.width}`
+      heightpx.innerHTML = `Height of the image : ${this.height}`
+    }
+  </script>
+</body>
+</html>
